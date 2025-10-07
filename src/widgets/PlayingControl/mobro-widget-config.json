@@ -1,0 +1,117 @@
+{
+  "name": "playing_control",
+  "displayName": "Playing Control",
+  "filename": "PlayingControl.tsx",
+  "config": [
+    {
+      "name": "playing_metric",
+      "label": "Playing Metric",
+      "type": "metric",
+      "filters": {
+        "valueTypes": [
+          "Boolean"
+        ]
+      },
+      "defaultValue": {
+        "id": "modbros_media.m_playing",
+        "plugin": "modbros_media",
+        "categories": [
+          "media"
+        ]
+      }
+    },
+    {
+      "name": "play_action",
+      "label": "Play Action",
+      "type": "action",
+      "defaultValue": {
+        "id": "modbros_media.a_play",
+        "plugin": "modbros_media",
+        "categories": [
+          "media"
+        ]
+      }
+    },
+    {
+      "name": "pause_action",
+      "label": "Pause Action",
+      "type": "action",
+      "defaultValue": {
+        "id": "modbros_media.a_pause",
+        "plugin": "modbros_media",
+        "categories": [
+          "media"
+        ]
+      }
+    },
+    {
+      "type": "color",
+      "name": "icon_color",
+      "label": "Color",
+      "defaultValue": {
+        "hex": "#ffffff",
+        "alpha": 1
+      }
+    },
+    {
+      "type": "color",
+      "name": "background_color",
+      "label": "Color"
+    },
+    {
+      "type": "color",
+      "name": "border_color",
+      "label": "Color"
+    },
+    {
+      "type": "number",
+      "name": "border_width",
+      "label": "Width"
+    },
+    {
+      "type": "string",
+      "name": "border_radius",
+      "label": "Radius"
+    },
+    {
+      "type": "number",
+      "name": "padding",
+      "label": "Padding"
+    }
+  ],
+  "layout": [
+    "playing_metric",
+    "play_action",
+    "pause_action",
+    {
+      "type": "fieldset",
+      "label": "Padding",
+      "collapsible": true,
+      "collapsed": true,
+      "children": [
+        "padding"
+      ]
+    },
+    {
+      "type": "fieldset",
+      "label": "Colors",
+      "collapsible": true,
+      "collapsed": true,
+      "children": [
+        "icon_color",
+        "background_color"
+      ]
+    },
+    {
+      "type": "fieldset",
+      "label": "Border",
+      "collapsible": true,
+      "collapsed": true,
+      "children": [
+        "border_color",
+        "border_width",
+        "border_radius"
+      ]
+    }
+  ]
+}

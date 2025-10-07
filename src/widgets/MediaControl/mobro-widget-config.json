@@ -1,0 +1,97 @@
+{
+  "name": "media_control",
+  "displayName": "Media Control",
+  "filename": "MediaControl.tsx",
+  "config": [
+    {
+      "name": "icon",
+      "type": "select",
+      "label": "Icon",
+      "options": [
+        {
+          "label": "Play",
+          "value": "play"
+        },
+        {
+          "label": "Pause",
+          "value": "pause"
+        },
+        {
+          "label": "Next",
+          "value": "next"
+        },
+        {
+          "label": "Previous",
+          "value": "previous"
+        }
+      ]
+    },
+    {
+      "type": "color",
+      "name": "icon_color",
+      "label": "Icon",
+      "defaultValue": {
+        "hex": "#ffffff",
+        "alpha": 1
+      }
+    },
+    {
+      "type": "color",
+      "name": "background_color",
+      "label": "Background"
+    },
+    {
+      "type": "color",
+      "name": "border_color",
+      "label": "Color"
+    },
+    {
+      "type": "number",
+      "name": "border_width",
+      "label": "Width"
+    },
+    {
+      "type": "string",
+      "name": "border_radius",
+      "label": "Radius"
+    },
+    {
+      "type": "number",
+      "name": "padding",
+      "label": "Padding"
+    }
+  ],
+  "layout": [
+    "icon",
+    {
+      "type": "fieldset",
+      "label": "Padding",
+      "collapsible": true,
+      "collapsed": true,
+      "children": [
+        "padding"
+      ]
+    },
+    {
+      "type": "fieldset",
+      "label": "Colors",
+      "collapsible": true,
+      "collapsed": true,
+      "children": [
+        "icon_color",
+        "background_color"
+      ]
+    },
+    {
+      "type": "fieldset",
+      "label": "Border",
+      "collapsible": true,
+      "collapsed": true,
+      "children": [
+        "border_color",
+        "border_width",
+        "border_radius"
+      ]
+    }
+  ]
+}

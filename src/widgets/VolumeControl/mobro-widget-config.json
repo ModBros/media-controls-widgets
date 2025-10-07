@@ -1,0 +1,109 @@
+{
+  "name": "volume_control",
+  "displayName": "Volume Control",
+  "filename": "VolumeControl.tsx",
+  "config": [
+    {
+      "name": "volume_metric",
+      "label": "Volume Metric",
+      "type": "metric",
+      "filters": {
+        "valueTypes": [
+          "Numeric"
+        ]
+      },
+      "defaultValue": {
+        "id": "modbros_media.m_mvol",
+        "plugin": "modbros_media",
+        "categories": [
+          "media"
+        ]
+      }
+    },
+    {
+      "name": "mute_metric",
+      "label": "Mute Metric",
+      "type": "metric",
+      "filters": {
+        "valueTypes": [
+          "Boolean"
+        ]
+      },
+      "defaultValue": {
+        "id": "modbros_media.m_mmute",
+        "plugin": "modbros_media",
+        "categories": [
+          "media"
+        ]
+      }
+    },
+    {
+      "type": "color",
+      "name": "icon_color",
+      "label": "Color",
+      "defaultValue": {
+        "hex": "#ffffff",
+        "alpha": 1
+      }
+    },
+    {
+      "type": "color",
+      "name": "background_color",
+      "label": "Color"
+    },
+    {
+      "type": "color",
+      "name": "border_color",
+      "label": "Color"
+    },
+    {
+      "type": "number",
+      "name": "border_width",
+      "label": "Width"
+    },
+    {
+      "type": "string",
+      "name": "border_radius",
+      "label": "Radius"
+    },
+    {
+      "type": "number",
+      "name": "padding",
+      "label": "Padding"
+    }
+  ],
+  "layout": [
+    "volume_metric",
+    "mute_metric",
+    {
+      "type": "fieldset",
+      "label": "Padding",
+      "collapsible": true,
+      "collapsed": true,
+      "children": [
+        "padding"
+      ]
+    },
+    {
+      "type": "fieldset",
+      "label": "Colors",
+      "collapsible": true,
+      "collapsed": true,
+      "children": [
+        "icon_color",
+        "background_color"
+      ]
+    },
+    {
+      "type": "fieldset",
+      "label": "Border",
+      "collapsible": true,
+      "collapsed": true,
+      "children": [
+        "border_color",
+        "border_width",
+        "border_radius"
+      ]
+    }
+  ]
+}
